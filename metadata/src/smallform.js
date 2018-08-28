@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { reduxForm, Field } from 'redux-form';
-import { ReduxCheckbox, Checkboxes } from 'react-form-checkbox';
+// import { ReduxCheckbox, Checkboxes } from 'react-form-checkbox';
 
 class VavForm extends Component {
   render() {
