@@ -1,10 +1,23 @@
 import 'babel-polyfill'
 
-import React from 'react'
-import { render } from 'react-dom'
-import Root from './containers/Root'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-render(
-  <Root />,
+import { createStore, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
+import { reducer as formReducer } from 'redux-form';
+
+import App from './metadata/App';
+
+const rootReducer = combineReducers({
+  form: formReducer
+});
+
+const store = createStore(rootReducer);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('equipment-metadata')
-)
+);
