@@ -72,7 +72,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
- <PersonList />
+ <PersonList selectedNode={window.selectedNode}/>
           <form>      
                   <div className="">
                     <p className="">Type</p>
